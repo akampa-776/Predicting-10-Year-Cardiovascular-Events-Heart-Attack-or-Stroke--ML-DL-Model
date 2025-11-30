@@ -3,13 +3,19 @@ import streamlit as st
 import joblib
 import pandas as pd
 import numpy as np
+import streamlit as st
+import pickle
 
 # Load model
-@st.cache_resource
-def load_model():
-    return joblib.load('cvd_risk_rf_model.pkl')
+# @st.cache_resource
+# def load_model():
+#     return joblib.load('cvd_risk_rf_model.pkl')
 
-model = load_model()
+# Load model
+with open("logistic_reg_model.pkl", "rb") as f:
+    model = pickle.load(f)
+
+# model = load_model()
 
 # Get exact column names the model expects
 try:
