@@ -2,7 +2,7 @@ streamlit
 # joblib
 pandas
 numpy<2.0
-scikit-learn>=1.5.2
-imbalanced-learn==0.12.1
+scikit-learn>=1.5.2, <1.6.0 #stable with python 3.13 support
+imbalanced-learn==0.12.1, >=0.13.0 # latest: fully supports sklearn 1.5+
 matplotlib
 seaborn
